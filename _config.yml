@@ -43,12 +43,12 @@ kramdown:
 
 
 # Disqus settings
-#disqus_username: _your_disqus_short_name_
+disqus_username: https-jaseprsui-xyz
 
 # Duoshuo settings
-duoshuo_username: huxblog
+# duoshuo_username: huxblog
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
 
@@ -64,7 +64,7 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "踩坑之後，填起來下次才不會再掉進去"
+sidebar-about-description: ""
 sidebar-avatar: /img/avatar-jasper.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
