@@ -1,22 +1,18 @@
 # Site settings
-title: Your Blog
-SEOTitle: 你的博客 | Your Blog
+title: Jasper Sui
+SEOTitle: Jasper Sui / Home
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
-description: ""
-keyword: ""
-url: "http://huangxuan.me"              # your host, for absolute URL
-baseurl: "/huxblog-boilerplate"         # for example, '/blog' if your blog hosted on 'host/blog'
+email: suiyang03@gmail.com
+description: Jasper Blog | Software Engineer | Python Lover"
+keyword: "Jasper, Sui, jaspersui, @jaspersui, Jasper Sui / Home, Blog, Python, Django, Web, CI/CD, 後端, 後端工程師"
+url: "https://jaspersui.xyz"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-#twitter_username:  huxpro
-facebook_username:  huxpro
+github_username:    JasperSui
 
 
 
@@ -68,8 +64,9 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，做做设计，看看产品。世界那么大，多玩玩看看。"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "踩坑之後，填起來下次才不會再掉進去"
+sidebar-avatar: /img/avatar-jasper.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
 
 
 
@@ -81,20 +78,4 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 # Friends
 friends: [
-    {
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
-    },{
-        title: "Foo",
-        href: "#"
-    },{
-        title: "Bar",
-        href: "#"
-    },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
-        href: "#"
-    }
 ]
