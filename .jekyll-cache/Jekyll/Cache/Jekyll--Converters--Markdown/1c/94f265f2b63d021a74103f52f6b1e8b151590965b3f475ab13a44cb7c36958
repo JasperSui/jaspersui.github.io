@@ -1,0 +1,117 @@
+I"L<h3 id="我的開發環境">我的開發環境</h3>
+<blockquote>
+  <ul>
+    <li>Windows 10</li>
+    <li>Python 3.6.5</li>
+    <li>Django 1.11</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h3 id="前置動作">※前置動作</h3>
+
+<p>需在你的 <code class="highlighter-rouge">app</code> 目錄下自行新增 <code class="highlighter-rouge">templates</code> 和 <code class="highlighter-rouge">static</code> 資料夾</p>
+
+<p><code class="highlighter-rouge">templates</code>：Django 預設 html 檔存放位置</p>
+
+<p><code class="highlighter-rouge">static</code>：用來存放 <code class="highlighter-rouge">css</code>、<code class="highlighter-rouge">js</code>、<code class="highlighter-rouge">fonts</code>、<code class="highlighter-rouge">images</code> 的起始資料夾，務必新增</p>
+
+<h3 id="step-1">Step 1</h3>
+<p>　
+進入 <code class="highlighter-rouge">Scripts</code> 中的專案資料夾 <code class="highlighter-rouge">mysite</code>，目錄層級如下：
+　</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysite/
+├── mysite/
+|　　　　├── __init__.py
+|　　　　├── settings.py
+|　　　　├── urls.py
+|　　　　└── wsgi.py
+├── app/
+|　　　　├── migrations/
+|　　　　├── templates/
+|　　　　└── static/
+|　　　　　　　　├── css/
+|　　　　　　　　├── fonts/
+|　　　　　　　　├── images/
+|　　　　　　　　└── js/
+└── manage.py
+</code></pre></div></div>
+<p>　
+————</p>
+
+<h3 id="step-2">Step 2</h3>
+
+<p>在 <code class="highlighter-rouge">mysite/settings.py</code> 裡修改以下內容：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+
+	# 原 DIRS
+        'DIRS': [],
+
+	# 修改後的 DIRS
+	'DIRS': [os.path.join(BASE_DIR, 'templates'),
+         os.path.join(BASE_DIR, 'static').replace('\\', '/')],
+    },
+]
+</code></pre></div></div>
+<p>　</p>
+
+<hr />
+
+<h3 id="step-3">Step 3</h3>
+
+<p>在 <code class="highlighter-rouge">mysite/settings.py</code> 最底部加入以下內容：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STATIC_URL = '/static/'
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STATICFILES_DIRS = (
+    ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
+    ('images', os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
+    ('fonts', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/')),
+    ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+)
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="step-4">Step 4</h3>
+
+<p>在 <code class="highlighter-rouge">mysite/urls.py</code> 最頂部加入：</p>
+
+<p><code class="highlighter-rouge">from django.contrib.staticfiles.urls import staticfiles_urlpatterns</code></p>
+
+<p>及最底部加入：</p>
+
+<p><code class="highlighter-rouge">urlpatterns += staticfiles_urlpatterns()</code></p>
+
+<hr />
+
+<h3 id="step-5">Step 5</h3>
+
+<p>在路徑前加入<code class="highlighter-rouge">/static/</code></p>
+
+<p><strong>導入 <code class="highlighter-rouge">CSS</code> 語法：</strong></p>
+
+<p><code class="highlighter-rouge">&lt;link rel="stylesheet" href="/static/css/style.css" /&gt;</code></p>
+
+<p><strong>導入 <code class="highlighter-rouge">JavaScript</code> 語法:</strong></p>
+
+<p><code class="highlighter-rouge">&lt;script src="/static/js/jquery.min.js"&gt;&lt;/script&gt;</code></p>
+
+<p><strong>導入 <code class="highlighter-rouge">image</code> 語法：</strong></p>
+
+<p><code class="highlighter-rouge">&lt;img src="/static/images/4.jpg"&gt;</code></p>
+
+<hr />
+
+<h3 id="-注意事項">※ 注意事項</h3>
+
+<h3 id="1-因為是以靜態方式取得檔案故若有更動以上檔案必須重啟伺服器">1. 因為是以靜態方式取得檔案，故若有更動以上檔案，必須重啟伺服器。</h3>
+
+<h3 id="2-最好以無痕式視窗重新讀取頁面以免瀏覽器根據-cache-讀取到舊的檔案">2. 最好以無痕式視窗重新讀取頁面，以免瀏覽器根據 Cache 讀取到舊的檔案。</h3>
+:ET
