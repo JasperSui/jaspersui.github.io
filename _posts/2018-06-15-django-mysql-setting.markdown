@@ -7,6 +7,7 @@ author:     "Jasper"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - Django
+    - MySQL
 ---
 
 ### 我的開發環境
