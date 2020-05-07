@@ -18,8 +18,8 @@ description: "用文字紀錄容易忘記的事情是金魚腦的唯一解藥"
             {{ post.content | strip_html | truncate:200 }}
         </div>
     </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    <p class="post-meta" style="text-align: right;">
+        {{ post.date | date: "%B %-d, %Y" }}
     </p>
 </div>
 <hr>
