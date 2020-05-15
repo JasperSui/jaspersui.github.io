@@ -1,0 +1,52 @@
+I"�<h2 id="前言">前言</h2>
+
+<p>因為想要了解更多有關 Python 的底層實作機制，還有更 Pythonic 的寫法，最近在讀 <a href="https://www.amazon.com/Fluent-Python-Concise-Effective-Programming/dp/1491946008">Fluent Python</a> 和 <a href="https://effectivepython.com/">Effective Python</a>，內容都有提到 Generator，自己實務上比較少運用到，想要隨手紀錄起來順便理一理思緒。</p>
+
+<hr />
+
+<h3 id="我的開發環境">我的開發環境</h3>
+<blockquote>
+  <ul>
+    <li>macOS Catalina</li>
+    <li>Python 3.7.7</li>
+  </ul>
+</blockquote>
+
+<h2 id="正文">正文</h2>
+
+<p>目前只有想到兩個場景可能會比較常用到 Generator 的特性：</p>
+
+<ul>
+  <li>讀取大量資料的檔案</li>
+  <li>迴圈因為需要迭代且回傳同一變數而耗費大量記憶體</li>
+</ul>
+
+<p>這邊有兩個名詞要分清楚：</p>
+
+<ol>
+  <li>可迭代的 iterable (Adj.)</li>
+  <li>迭代器 iterator (Noun.)</li>
+</ol>
+
+<p>要能夠 iterable，必須要實作 iterator 的 <code class="highlighter-rouge">iterator.__iter__()</code>，這個 function 會回傳一個 iterator，用來一次回傳一個成員的物件。有些 iterable 的物件 (e.g. List) 是將值存在記憶體中，而其他就是像 iterator，只有當正在執行的時候才會佔用記憶體空間。</p>
+
+<p>iterator 除了 <code class="highlighter-rouge">iterator.__iter__()</code> 要實作之外，還需要 <code class="highlighter-rouge">iterator.__next__()</code>，當調用 <code class="highlighter-rouge">next()</code> 的時候，會做幾件事：</p>
+
+<ul>
+  <li>更新自身 (iterator) 狀態，將自己指到下一個位址，如果下一個位址沒有值，狀態就會變為 StopIteration</li>
+  <li>回傳目前的結果（類似於 pop），回傳完之後值就會從 iterator 中消失，都回傳後就變成空的 Generator 容器 (not None)</li>
+</ul>
+
+<p>直接進到場景可能會直觀一點，假設今天有個需求是要從供應商的 API 取得 n 個產品的 ID，而該 API 一次只回傳單個 ID：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_product_id_list</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">get_id_from_api</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">result</span> <span class="c1"># result = [1, 2, 3, 4, 5, 6, ..., n]
+</span></code></pre></div></div>
+
+<h2 id="參考">參考</h2>
+
+<p><a href="https://lotabout.me/2017/Python-Generator/">Python Generator</a></p>
+:ET

@@ -1,0 +1,81 @@
+# Site settings
+title: Jasper Sui
+SEOTitle: Jasper Sui | Home
+header-img: img/home-bg.jpg
+email: suiyang03@gmail.com
+description: Jasper Blog | Software Engineer | Python Lover"
+keyword: "Jasper, Sui, jaspersui, @jaspersui, Jasper Sui / Home, Blog, Python, Django, Web, CI/CD, 後端, 後端工程師"
+url: "https://jaspersui.xyz"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+
+
+# SNS settings
+RSS: false
+github_username: JasperSui
+linkedin_username: yang-sui-031a74172  
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+disqus_username: https-jaseprsui-xyz
+
+# Duoshuo settings
+# duoshuo_username: huxblog
+# Share component is depend on Comment so we can NOT use share only.
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# Google Analytics
+ga_track_id: 'UA-165838464-1'            # Format: UA-xxxxxx-xx
+ga_domain: jaspersui.xyz
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "Study at National Taiwan University of Science and Technology, exchanged in Warsaw University of Technology. Major in Management of Information System."
+sidebar-avatar: /img/avatar-jasper.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+friends: [
+]
