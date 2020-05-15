@@ -9,6 +9,7 @@ tags:
     - Django
     - Css
     - JavaScript
+    - 技術筆記
 ---
 
 ### 我的開發環境

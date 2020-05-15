@@ -8,6 +8,7 @@ header-img: "img/post-bg-2015.jpg"
 tags:
     - Python
     - Django
+    - 技術筆記
 ---
 
 ## 前言
