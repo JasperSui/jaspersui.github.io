@@ -39,18 +39,48 @@ iterator 除了 `iterator.__iter__()` 要實作之外，還需要 `iterator.__ne
 - 更新自身 (iterator) 狀態，將自己指到下一個位址，如果下一個位址沒有值，狀態就會變為 StopIteration
 - 回傳目前的結果（類似於 pop），回傳完之後值就會從 iterator 中消失，都回傳後就變成空的 Generator 容器 (not None)
 
-直接進到場景可能會直觀一點，假設今天有個需求是要從供應商的 API 取得 n 個產品的 ID，而該 API 一次只回傳單個 ID：
+直接進到場景可能會直觀一點，假設今天有個需求是要讀取一個 `data.csv` 檔案，並列出這個檔案的行數：
 
 ```python
-def get_product_id_list(n):
-    result = []
-    for i in range(n):
-        result.append(get_id_from_api())
-    return result # result = [1, 2, 3, 4, 5, 6, ..., n]
+import csv
+def new_test_csv():
+    with open('data.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        for i in range(1000000000):
+            writer.writerow([i])
 ```
 
-在數量小的情況下，這樣做沒什麼太大的問題，但如果今天需要接受 10000000 個產品 ID 時，
+```python
+def file_reader(file_name):
+    with open(file_name) as f:
+        return f.read().split('\n')
+
+file_generator = file_reader('data.csv')
+row_count = 0
+
+for row in file_generator:
+    row_count += 1
+
+print(f"Total row count: {row_count}")
+```
+
+在數量小的情況下，這樣做沒什麼太大的問題，但如果今天如果 `data.csv` 的行數很多，就有可能會產生 `MemoryError` 的例外狀況，這時候如果我們將 `file_reader()` 改寫一下：
+
+```python
+def file_reader(file_name):
+    with open(file_name) as f:
+        for row in f:
+            yield row
+```
+
 在記憶體內就會需要去儲存迴圈內每一次加入後的結果，但實際上我們要的只是最後的那個 result，並不想要短時間內被佔用太大的記憶體空間。
+
+#TODO 產生CSV的FUNCTION
+#TODO MEMORY ERROR 的範例
+#TODO 費氏數列
+#TODO FOR...IN... GENERATOR
+
+
 
 ## 參考
 
