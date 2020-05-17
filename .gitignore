@@ -4,3 +4,7 @@ node_modules
 */.DS_Store
 */*/.DS_Store
 *.sh
+Gemfile.lock
+package-lock.json
+.jekyll-cache
+.jekyll-cache/*
