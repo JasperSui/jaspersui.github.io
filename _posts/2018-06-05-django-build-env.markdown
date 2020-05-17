@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Django 環境建置教學 (1.11)"
+title:      "[Django] 環境建置教學 (1.11)"
 subtitle:   ""
 date:       2018-06-05 10:00:00
 author:     "Jasper"
@@ -8,6 +8,7 @@ header-img: "img/post-bg-2015.jpg"
 tags:
     - Python
     - Django
+    - 技術筆記
 ---
 
 ## 前言

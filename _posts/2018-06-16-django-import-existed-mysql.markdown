@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Django 使用 MySQL 舊有資料庫"
+title:      "[Django] 使用 MySQL 舊有資料庫"
 subtitle:   ""
 date:       2018-06-16 10:00:00
 author:     "Jasper"
@@ -8,6 +8,7 @@ header-img: "img/post-bg-2015.jpg"
 tags:
     - Django
     - MySQL
+    - 技術筆記
 ---
 
 ### 我的開發環境

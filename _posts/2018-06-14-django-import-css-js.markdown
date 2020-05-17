@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Django中以靜態方式導入 css, js 檔"
+title:      "[Django] 靜態方式導入 css, js 檔"
 subtitle:   ""
 date:       2018-06-14 10:00:00
 author:     "Jasper"
@@ -9,6 +9,7 @@ tags:
     - Django
     - Css
     - JavaScript
+    - 技術筆記
 ---
 
 ### 我的開發環境
