@@ -37,7 +37,7 @@ import asyncio
 
 async def receive():
     # Start...
-    
+    g
     await asyncio.sleep(30)
     # End...
 ```
@@ -83,6 +83,12 @@ async def receive():
 因此，想要解決這個問題的話，其實還是要看到 Channels 背後是如何去處理這塊的，目前就只能透過上述提到的兩種方式來避免這個報錯。
 
 如內容有錯請在下方留言告知，非常樂意討論！
+
+---
+
+#### 2020/5/23 更新
+
+後來發現其實這個例外狀況是 `daphne/server.py` 在報錯的，所以是和 Daphne 有關，或許換個其他 ASGI Server 可以解決這個問題。
 
 ## 參考
 
