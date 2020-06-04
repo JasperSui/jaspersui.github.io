@@ -79,4 +79,8 @@ featured-condition-size: 0              # A tag will be featured if the size of 
 
 # Friends
 friends: [
+  {
+    title: "Johnny",
+    href: "https://medium.com/@hiimdoublej"
+  },
 ]
