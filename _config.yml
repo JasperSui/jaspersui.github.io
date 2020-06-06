@@ -64,8 +64,7 @@ ga_domain: jaspersui.xyz
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Study at National Taiwan Universit--y of Science and Technology, exc--hanged in Warsaw University of  
-　Technology. Major in Management of Information System."
+sidebar-about-description: "Study at National Taiwan Universit--y of Science and Technology, exchanged in Warsaw University of Technology. Major in Management of Information System."
 sidebar-avatar: /img/avatar-jasper.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
