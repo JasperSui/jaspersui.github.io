@@ -124,4 +124,5 @@ tags:
 接下來就可以去 [127.0.0.0:8000](http://127.0.0.1:8000) 看看服務有沒有正常運行，接下來要停止 Container 也只需要一組快捷鍵即可 (`Ctrl/Command + c`)，確認正常運行後今天的任務就結束了！
 
 ### 相關文章
-[[K8s + Jenkins] 將舊有 Django 專案翻新 (1) - 前言]({% post_url 2020-06-02-k8s-jenkins-django-project-1 %})
+[[K8s + Jenkins] 將舊有 Django 專案翻新 (1) - 前言]({% post_url 2020-06-02-k8s-jenkins-django-project-1 %})<br>
+[[K8s + Jenkins] 將舊有 Django 專案翻新 (3) - Google Kubernetes Engine (上)]({% post_url 2020-06-06-k8s-jenkins-django-project-3 %})
