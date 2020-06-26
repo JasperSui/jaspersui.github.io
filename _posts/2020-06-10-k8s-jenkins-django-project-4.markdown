@@ -102,6 +102,8 @@ spec:
 [[K8s + Jenkins] 將舊有 Django 專案翻新 (5) - Django Static File With Nginx]({% post_url 2020-06-14-k8s-jenkins-django-project-5 %})<br>
 [[K8s + Jenkins] 將舊有 Django 專案翻新 (6) - Ingress]({% post_url 2020-06-16-k8s-jenkins-django-project-6 %})<br>
 [[K8s + Jenkins] 將舊有 Django 專案翻新 (7) - Jenkins]({% post_url 2020-06-21-k8s-jenkins-django-project-7 %})
+<br>
+[[K8s + Jenkins] 將舊有 Django 專案翻新 (8) - 結語]({% post_url 2020-06-26-k8s-jenkins-django-project-8 %})
 
 ## 參考
 
