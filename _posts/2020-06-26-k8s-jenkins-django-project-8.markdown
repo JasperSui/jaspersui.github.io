@@ -40,9 +40,3 @@ Jing 是我們的 Sr. Backend Engineer，從談吐到實際操作的舉手投足
 [[K8s + Jenkins] 將舊有 Django 專案翻新 (5) - Django Static File With Nginx]({% post_url 2020-06-14-k8s-jenkins-django-project-5 %})<br>
 [[K8s + Jenkins] 將舊有 Django 專案翻新 (6) - Ingress]({% post_url 2020-06-16-k8s-jenkins-django-project-6 %})<br>
 [[K8s + Jenkins] 將舊有 Django 專案翻新 (7) - Jenkins]({% post_url 2020-06-21-k8s-jenkins-django-project-7 %})
-
-## 參考
-
-[30. Docker 與 CI/CD (下)](https://ithelp.ithome.com.tw/articles/10209866)<br>
-[Jenkins on Kubernetes Engine](https://cloud.google.com/solutions/jenkins-on-kubernetes-engine?hl=zh-tw)<br>
-[基于 Jenkins 的 CI/CD (二)](https://www.qikqiak.com/k8s-book/docs/37.Jenkins%20Pipeline.html)
