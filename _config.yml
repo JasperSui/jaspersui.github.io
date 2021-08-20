@@ -5,7 +5,7 @@ header-img: img/home-bg2.jpg
 email: suiyang03@gmail.com
 description: 我是 Jasper，這裡是我紀錄著生活、程式碼的一片天地，歡迎你一起來討論、分享更多的知識！"
 keyword: "Jasper, Sui, jaspersui, @jaspersui, Jasper Sui / Home, Blog, Python, Django, Web, CI/CD, 後端, 後端工程師"
-url: "https://jaspersui.xyz"              # your host, for absolute URL
+url: "https://j-sui.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -58,7 +58,7 @@ disqus_username: https-jaseprsui-xyz
 ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
 ga_track_id: 'UA-165838464-1'            # Format: UA-xxxxxx-xx
-ga_domain: jaspersui.xyz
+ga_domain: j-sui.com
 
 
 

@@ -3,6 +3,7 @@ layout:     post
 title:      "[Django] 使用 MySQL 舊有資料庫"
 subtitle:   ""
 date:       2018-06-16 10:00:00
+description: "如果你已經有了一個舊的 MySQL 資料庫，並想要直接使用的話，參考以下教學即可！"
 author:     "Jasper"
 header-img: "img/post-bg-2015.jpg"
 tags:
@@ -17,7 +18,7 @@ tags:
 > - Django 1.11
 > - MySQL Server 8.0
 
-※ 如果還沒有設置資料庫，請先服用：<a href="https://jaspersui.xyz/2018/06/15/django-mysql-setting/">https://jaspersui.xyz/2018/06/15/django-mysql-setting/</a>
+※ 如果還沒有設置資料庫，請先服用：<a href="https://j-sui.com/2018/06/15/django-mysql-setting/">https://j-sui.com/2018/06/15/django-mysql-setting/</a>
 
 ------------
 

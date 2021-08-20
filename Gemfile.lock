@@ -10,7 +10,6 @@ GEM
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     ffi (1.12.2)
-    ffi (1.12.2-x64-mingw32)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
     i18n (1.8.2)
@@ -55,21 +54,16 @@ GEM
     safe_yaml (1.0.5)
     sassc (2.3.0)
       ffi (~> 1.9)
-    sassc (2.3.0-x64-mingw32)
-      ffi (~> 1.9)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     unicode-display_width (1.7.0)
-    wdm (0.1.1)
 
 PLATFORMS
   ruby
-  x64-mingw32
 
 DEPENDENCIES
   jekyll (~> 4.0)
   jekyll-paginate
-  wdm (>= 0.1.0)
 
 BUNDLED WITH
    2.1.4

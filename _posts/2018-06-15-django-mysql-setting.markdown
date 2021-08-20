@@ -3,6 +3,7 @@ layout:     post
 title:      "[Django] 設置 MySQL 資料庫"
 subtitle:   ""
 date:       2018-06-15 10:00:00
+description: "用膩了 Django 內建 SQLite 的話，就改用 MySQL 吧！"
 author:     "Jasper"
 header-img: "img/post-bg-2015.jpg"
 tags:

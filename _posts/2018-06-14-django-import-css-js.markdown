@@ -3,6 +3,7 @@ layout:     post
 title:      "[Django] 靜態方式導入 css, js 檔"
 subtitle:   ""
 date:       2018-06-14 10:00:00
+description: "帶你用靜態的方式替 Django 導入 css 和 js 檔！"
 author:     "Jasper"
 header-img: "img/post-bg-2015.jpg"
 tags:
