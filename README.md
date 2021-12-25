@@ -1,5 +1,3 @@
-# HuxBlog Boilerplate
+#### Preview script
 
-##### Credit: [Hux Blog](https://github.com/Huxpro/huxpro.github.io)
-
-##### Author: [Huxpro](https://github.com/Huxpro) 
+`npm run-script start`

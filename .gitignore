@@ -7,3 +7,5 @@ node_modules
 Gemfile.lock
 package-lock.json
 /.jekyll-cache/
+.jekyll-cache
+.jekyll-cache/
