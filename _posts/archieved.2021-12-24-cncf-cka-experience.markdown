@@ -16,29 +16,51 @@ tags:
 
 睽違了十個月的發文，累積了一些想法都還沒有變成文章，最近會慢慢來把之前想好的主題都紀錄下來的，就先從最近考到的 Certified Kubernetes Administrator (CKA) 證照開始吧！
 
+<br>
+
 ## 介紹
 
 ![img](https://i.imgur.com/mP5nWWv.png)
 
 [Certified Kubernetes Administrator (CKA)](https://www.cncf.io/certification/cka/) 是由 [Cloud Native Computing foundation (CNCF)](https://www.cncf.io/) 所發行的證書，目前的報名費用是 **$375** 美元，不定時會有一些折扣碼釋出，但今年的黑色星期五就很罕見的沒有佛心折扣碼，只有一些固定打 8 折或 85 折的折扣碼，但下面會提到我是在哪邊去買這個考試資格的，總共只花了 6500 台幣，算起來大概打了 62 折，能大幅降低荷包失血的程度 XD。
 
-CKA 提供瞭解各個 Kubernetes 基礎元件組成，以及清楚 Kubernetes 架構和運作模式的「管理者/開發者」來進行測驗，考試時間 2 個小時，我遇到的題目總共有 17 題，體感上來說題目的順序並不是照著難度來排的，考試配分的比重我覺得和官方提供的[配分表](https://www.cncf.io/certification/cka/)蠻相似的：
+CKA 提供瞭解各個 Kubernetes 基礎元件組成，以及清楚 Kubernetes 架構和運作模式的「管理者/開發者」來進行測驗，考試時除了 Terminal 分頁以外，還可以再開一個[官方 Kubernetes Docs](https://kubernetes.io/docs/home/) 的分頁來查詢，考試時間 2 個小時，我遇到的題目總共有 17 題，體感上來說題目的順序並不是照著難度來排的，考試配分的比重我覺得和官方提供的[配分表](https://www.cncf.io/certification/cka/)蠻相似的：
 
 ![img](https://i.imgur.com/ifFZxvK.png)
 
 本篇適合粗略瞭解**容器化概念 (Containerized)**的讀者，不管你之前有沒有接觸過 Kubernetes，相信這篇文章應該能帶給你一些收穫，會和大家分享一些考試的技巧，以及我如何從只會在工作環境使用一些 Kubernetes 簡單指令到拿到 CKA 證照的！
 
+<br>
 
-## 考試前準備
+## 考前準備
+
+#### Udmey 課程
 
 在這裡推薦任何不管有無經驗想要考 CKA 的讀者，花個 380 塊台幣跟著 Udemy 上的課程 [Certified Kubernetes Administrator (CKA) with Practice Tests](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/) 來準備。如果你完全沒有經驗的話，那這篇能夠帶你去從 Kubernetes 基礎的設計從廣而深去學習；如果你是平常就有在使用 Kubernetes 來做日常開發的工程師，那這個課程能夠更穩固你的知識，甚至是在之後需求和架構上的設計都能因爲更全面地瞭解 Kubernetes 而有更多元彈性的解決方案！
 
 這個課程的講師 **Mumshad Mannambeth** 除了 CKA 以外也有提供 CKAD 的課程，整個課程上完的感覺優點如下：
 
-1. 上課節奏是很平穩的，語速偶爾會稍快但是對於英聽也是一種練習
-2. 講師口音不明顯，算是很好理解，
+1. 價格便宜，Udemy 時常會有折扣價所以大約 10 美元左右就可以買到了
+2. 上課節奏是很平穩的，講師口音不明顯，語速偶爾會稍快但也可以練習一些英聽
 3. 對於一些前置的基礎概念包括 Docker, Networking, etc. 都會有小節來幫你補足先備知識
-4. **提供免費的線上環境讓你不斷地去做 Practice Tests 來熟悉操作**
+4. 學習完各個元件、知識後都有 **Practice Tests** 可以練習，最後還有三次的 Mock Exam 可以做
+5. **提供免費的 Web 環境 (KodeKloud) 讓你無限次地去做 Practice Tests 來熟悉操作**
+
+
+![img](https://i.imgur.com/JNFCnOZ.png)
+
+
+最後一點是我認為最重要也是這個課程最優質的一點，因為有一個環境能夠讓你方便快速的實戰練習各個小節學到的知識和技巧是很重要的。CKA 在你大概懂 Kubernetes 的架構之後，考點就剩下你對 `Terminal`、`Kubernertes CLI` 的熟練度了，如果你能夠在測試環境去完成各個元件的操作 (`Pod`, `Service`, `Deployment` ...)，那在真正上考場的時候也就不需要擔心了，因為接下來會提供一份之前考試時使用的書籤資料夾，裡面已經有各種常見且分好類的文檔連結，這樣在看到類似的題目時可以直接用書籤進到文檔頁面，會省去很多時間。
+
+<br>
+
+#### 準備時間
+
+我大概是在 8 月下旬的時候買上面的課程決定要考 CKA 的，每天用的時間就是平日中午吃飯從配 Youtube 換成配 Udemy，一天取決於小節長度，大約都可以看 2 ~ 4 個小節左右，假日則是看個 1 ~ 2 個小時的課程，再邊補齊平日看完但沒做完 Practice Tests 的地方，最後在 11 月中旬的時候就順利考到證照啦！
+
+其實我準備的時間算是拉得很長的，主要是因為不想要學得太趕，把每個地方都學透徹了慢慢學才繼續走下一步，加上某些不熟悉的地方會練習比較多次，像是 **ETCD 備份**、**Cluster 升級** 之類的，平常如果你和我一樣接觸到的都是 Cloud Platform (`GKE`, `EKS`, `AKS`) 幫你管理 Kubernetes 平台的話，那這些東西對你來說會相較於使用 `Pod`、`Deployment`、`Service`、`Ingress` 來得陌生，而這些考題的比分佔比也是相較簡單的題目多蠻多的，加上這幾塊因為流程其實雖然繁瑣，但最根本的那幾個指令和步驟都是在文檔上面清清楚楚的寫出來了，所以我認為這些都是很好拿分的考點。
+
+在 11 月初的時候因為已經安排考試時間了，所以我就是有意識地去不斷重作一些自己認為不熟的章節，包括 Mock Exam 三題也是刷了好幾遍，盡可能讓自己去熟悉實際操作，考試當下看到題目的時候才不會因為緊張而忘記指令。
 
 
 ## 實作
