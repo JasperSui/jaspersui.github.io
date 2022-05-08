@@ -15,7 +15,11 @@ description: "用文字紀錄容易忘記的事情是金魚腦的唯一解藥"
         </h3>
         {% endif %}
         <div class="post-content-preview">
+            {% if post.lang == 'en' %}
+            {{ post.content | strip_html | truncate:300 }}
+            {% else %}
             {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
         </div>
     </a>
     <p class="post-meta" style="text-align: right;">
