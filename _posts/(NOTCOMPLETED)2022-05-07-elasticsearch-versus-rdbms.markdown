@@ -1,4 +1,4 @@
----
+<!-- ---
 layout:     post
 title:      "Elasticsearch 和 RDBMS 面對篩選多欄位資料需求的差別"
 subtitle:   ""
@@ -156,4 +156,4 @@ CKA 提供瞭解各個 Kubernetes 基礎元件組成，以及清楚 Kubernetes �
 ## 參考
 
 [Cloud Native Computing Foundation](https://www.cncf.io/)<br>
-[Linux Foundation Documentation](https://www.docs.linuxfoundation.org/)<br>
+[Linux Foundation Documentation](https://www.docs.linuxfoundation.org/)<br> -->
