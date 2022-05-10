@@ -5,32 +5,36 @@ header-img: img/home-bg2.jpg
 email: suiyang03@gmail.com
 description: 我是 Jasper，這裡是我紀錄著生活、程式碼的一片天地，歡迎你一起來討論、分享更多的知識！"
 keyword: "Jasper, Sui, j-sui, Yang Sui, Sui Yang, suiyang, yangsui, jasper sui, jaspersui, @jaspersui, Jasper Sui / Home, Blog, Python, Django, Web, Kubernetes, CI/CD, 後端, 後端工程師"
-url: "https://j-sui.com"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://j-sui.com" # your host, for absolute URL
+baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
-
+# Publish posts or collection documents with a future date.
+future: true
 
 # SNS settings
 RSS: false
 github_username: JasperSui
 linkedin_username: yang-sui-031a74172
 
-
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
 paginate: 6
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+exclude: ["less", "node_modules", "Gruntfile.js", "package.json", "README.md"]
+anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN
 
-
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate]
-
-
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -38,9 +42,13 @@ gems: [jekyll-paginate]
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
-
+  input: GFM # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 # Disqus settings
 disqus_username: https-jaseprsui-xyz
@@ -50,44 +58,37 @@ disqus_username: https-jaseprsui-xyz
 # Share component is depend on Comment so we can NOT use share only.
 # duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
-
-
+# Netease settings
+netease_comment: false
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# ba_track_id: [your track id]
+
 # Google Analytics
-ga_track_id: 'UA-165838464-1'            # Format: UA-xxxxxx-xx
+ga_track_id: "UA-165838464-1" # Format: UA-xxxxxx-xx
 ga_domain: j-sui.com
 
-
-
 # Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Highly skilled and motivated Backend Engineer with 4 years of experience since I was in university. Proficient in Python, Django (DRF), Kubernetes (w/ CKA), Cloud Platforms & CI/CD tools."
-sidebar-avatar: /img/avatar-jasper.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
-
+sidebar: true # whether or not using Sidebar.
+sidebar-about-description: "Highly skilled and motivated Backend Engineer with 5 years of experience since I was in university. Proficient in Python, Django (DRF), Kubernetes (w/ CKA), Cloud Platforms & CI/CD tools."
+sidebar-avatar: /img/avatar-jasper.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
+featured-tags: true # whether or not using Feature-Tags
+featured-condition-size: 0 # A tag will be featured if the size of it is more than this condition value
 
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
 
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
 
 # Friends
-friends: [
-  {
-    title: "Jing",
-    href: "https://sillygod.github.io/"
-  },
-  {
-    title: "Johnny",
-    href: "https://johnnyhurts.com/"
-  },
-  {
-    title: "Jason",
-    href: "https://hackmd.io/@lilybon"
-  },
-]
+friends:
+  [
+    { title: "Jing", href: "https://sillygod.github.io/" },
+    { title: "Johnny", href: "https://johnnyhurts.com/" },
+    { title: "Jason", href: "https://hackmd.io/@lilybon" },
+  ]
