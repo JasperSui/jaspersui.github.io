@@ -29,7 +29,7 @@ tags:
 
 用生活上的例子來說明 LRU Cache 機制是最簡單不過的了，之前有看到有人用衣服放在衣櫃裡的情境來形容，這邊借用一下圖片。
 
-![img](https://pbs.twimg.com/media/Dsa6TcAVAAEUcTw?format=jpg&name=small)
+![img](https://i.imgur.com/dFPNFYl.jpeg)
 
 可以想想自己衣櫃平常是怎麼被使用的，常穿的衣服一定都是衣櫃靠近前面那幾件，要用的時候拿出來穿，穿完之後洗乾淨再掛回衣櫃的前面，一直沒有在穿的衣服就被堆到衣櫃的後方，直到哪一天突然想到一件很久沒穿的衣服，拿出來穿完洗乾淨之後再放回衣櫃的前面。
 
@@ -66,7 +66,7 @@ class LRUCache:
         self.queue = deque()
     
     def get(self, key):
-        if key in self.queue:
+        if key in self.hash_map:
             # 將 Key 從 Queue 中拿出並放到最前面
             
             self.queue.remove(key)
@@ -75,7 +75,7 @@ class LRUCache:
 
     
     def set(self, key, value):
-        if key not in self.queue:
+        if key not in self.hash_map:
             if len(self.queue) == self.size:
                 deleted_key = self.queue.pop() # 將最後一個順位的 Key pop 掉
 
@@ -87,7 +87,7 @@ class LRUCache:
                 self.hash_map[key] = value
                 self.queue.appendleft(key)
         else:
-            # 若 Key 已經在 Queue 裡面就直接 Refresh 該 Key 即可
+            # 若 Key 已經在 HashMap 裡面就直接 Refresh 該 Key 即可
 
             self.queue.remove(key)
             self.queue.appendleft(key)
