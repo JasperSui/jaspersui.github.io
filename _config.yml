@@ -66,12 +66,12 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: "UA-165838464-1" # DEPRECATED
+
 ga_domain: j-sui.com
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "Highly skilled and motivated Backend Engineer with 5 years of experience since I was in university. Proficient in Python, Django (DRF), Kubernetes (w/ CKA), Cloud Platforms & CI/CD tools."
+sidebar-about-description: "Highly skilled and motivated Backend Engineer with 6 years of experience since I was in university. Proficient in Python, Django (DRF), Kubernetes (w/ CKA), Cloud Platforms & CI/CD tools."
 sidebar-avatar: /img/avatar-jasper.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
