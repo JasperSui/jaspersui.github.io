@@ -55,6 +55,15 @@ layout: default
                     <div id="disqus_thread" class="disqus-thread"></div>
                 </div>
                 {% endif %}
+
+                <hr>
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread">
+                        <script src="https://utteranc.es/client.js" repo="JasperSui/jaspersui.github.io"
+                            issue-term="title" label="Post" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
             </div>
 
             <!-- Side Catalog Container -->
@@ -111,7 +120,6 @@ layout: default
 </script>
 <!-- disqus 公共JS代码 end -->
 {% endif %}
-
 
 {% if site.anchorjs %}
 <!-- async load function -->

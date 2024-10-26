@@ -51,7 +51,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: https-jaseprsui-xyz
+disqus_username:  # https-jaseprsui-xyz
 
 # Duoshuo settings
 # duoshuo_username: huxblog
@@ -80,7 +80,7 @@ featured-condition-size: 0 # A tag will be featured if the size of it is more th
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
-service-worker: true
+service-worker: false
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
