@@ -14,6 +14,50 @@ tags:
     - CLI
     - Testing
 ---
+## _🚀 2024/12/21 重要更新 🚀_
+
+距離這篇文章最初版過了兩個月，我想分享一下我的第一個開源套件 - [fastapi-injectable](https://github.com/JasperSui/fastapi-injectable)。
+
+`fastapi-injectable` 會誕生的原因就是因為這篇文章遇到的痛點，他是 Production-ready 的一個套件，讓你能在 FastAPI 的 Routes 以外**無痛地**使用那些帶有 `Depends()` 參數的 Code，話不多說，直接上 Code：
+
+在使用之前，先透過 `pip install fastapi-injectable` 來安裝！
+
+```python
+from typing import Annotated
+
+from fastapi import Depends
+from fastapi_injectable import injectable
+
+class Database:
+    def query(self) -> str:
+        return "data"
+
+def get_db() -> Database:
+    return Database()
+
+def process_data(db: Annotated[Database, Depends(get_db)]) -> str:
+    return db.query()
+
+# Use it anywhere!
+result = process_data()
+print(result) # Output: 'data'
+```
+
+沒有 `fastapi-injectable` 以前，是沒辦法快速地直接複用既有的 Code 的，那如果你的整個專案都是基於 FastAPI `Depends()` 做商業邏輯，你就得因為 `Depends()` 沒辦法在 FastAPI 的 Routes 以外使用，去做出很多 Workaround。
+
+但現在不用了！透過 `fastapi-injectable`，以前那些讓你很頭痛的場景都一一化解了！
+
+1. CLI Tools
+2. Background Workers
+3. REPL Server
+4. 任何 FastAPI Routes 以外的地方
+
+如果有任何回饋或想法，歡迎直接發個 Issue 或 PR 來幫助 [fastapi-injectable](https://github.com/JasperSui/fastapi-injectable) 更好，也希望可以動動手指幫忙按個星星✨，我會很開心的！
+
+
+> __以下接續原文...__
+<hr>
+
 ## 版本
 
 本文所附的程式碼在以下環境測試過沒問題：

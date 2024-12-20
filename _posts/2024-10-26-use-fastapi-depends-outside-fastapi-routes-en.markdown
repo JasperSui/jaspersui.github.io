@@ -14,6 +14,50 @@ tags:
     - CLI
     - Testing
 ---
+## _🚀 2024/12/21 Important Update 🚀_
+
+It’s been two months since the original post, and I’d like to share my first open-source package - [fastapi-injectable](https://github.com/JasperSui/fastapi-injectable).
+
+The reason for creating `fastapi-injectable` is to address the pain points mentioned in the original post. It’s a production-ready package that allows you to **seamlessly** use code with `Depends()` parameters outside of FastAPI routes. Let’s skip the talk and dive straight into the code:
+
+Before using it, install it via `pip install fastapi-injectable`!
+
+```python
+from typing import Annotated
+
+from fastapi import Depends
+from fastapi_injectable import injectable
+
+class Database:
+    def query(self) -> str:
+        return "data"
+
+def get_db() -> Database:
+    return Database()
+
+def process_data(db: Annotated[Database, Depends(get_db)]) -> str:
+    return db.query()
+
+# Use it anywhere!
+result = process_data()
+print(result) # Output: 'data'
+```
+
+Before `fastapi-injectable`, it was not easy to quickly reuse existing code. If your entire project is based on FastAPI `Depends()` for business logic, you had to create many workarounds because `Depends()` couldn’t be used outside FastAPI routes.
+
+But now, that’s no longer an issue! With `fastapi-injectable`, all those tricky scenarios have been resolved!
+
+1. CLI Tools
+2. Background Workers
+3. REPL Server
+4. Anywhere outside FastAPI Routes
+
+If you have any feedback or ideas, feel free to open an issue or submit a PR to help improve [fastapi-injectable](https://github.com/JasperSui/fastapi-injectable). I’d also appreciate it if you could star the project ✨. It would make me really happy!
+
+
+> Continuing from the original post...
+<hr>
+
 ## Versions
 
 The code in this article has been tested in the following environment:
