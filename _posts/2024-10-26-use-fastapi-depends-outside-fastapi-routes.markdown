@@ -35,6 +35,7 @@ class Database:
 def get_db() -> Database:
     return Database()
 
+@injectable
 def process_data(db: Annotated[Database, Depends(get_db)]) -> str:
     return db.query()
 
